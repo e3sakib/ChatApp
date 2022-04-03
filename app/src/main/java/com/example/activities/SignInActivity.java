@@ -20,6 +20,6 @@ public class SignInActivity extends AppCompatActivity {
     }
     private void setListeners(){
         binding.textCreateNewAccount.setOnClickListener(view ->
-                startActivity(new Intent(getApplicationContext(),SignInActivity.class)));
+                startActivity(new Intent(getApplicationContext(),SignUpActivity.class)));
     }
 }

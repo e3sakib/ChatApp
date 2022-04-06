@@ -27,6 +27,7 @@ public class SignInActivity extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         preferenceManager = new PreferenceManager(getApplicationContext());
+
         binding= ActivitySignInBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         setListeners();
@@ -45,6 +46,7 @@ public class SignInActivity extends AppCompatActivity {
     }
 
     private void signIn(){
+
       loading(true);
         FirebaseFirestore database = FirebaseFirestore.getInstance();
         database.collection(Constants.KEY_COLLECTION_USERS)
@@ -96,7 +98,7 @@ public class SignInActivity extends AppCompatActivity {
             showToast("Enter Password");
             return false;
         }else {
-            return false;
+            return true;
         }
     }
 
